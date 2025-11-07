@@ -1970,7 +1970,7 @@ class StringParenWrapper(BaseStringSplitter, CustomSplitMapMixin):
                 char == " " or char in SPLIT_SAFE_CHARS for char in string_value
             ):
                 # And will still violate the line length limit when split...
-                max_string_width = self.line_length - ((line.depth + 1) * 4)
+                max_string_width = self.line_length - ((line.depth + 1) * 2)
                 if str_width(string_value) > max_string_width:
                     # And has no associated custom splits...
                     if not self.has_custom_splits(string_value):
